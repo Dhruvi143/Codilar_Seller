@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * db_schema.xml
+ *
+ * @description A magento 2 module to have sellers for products
+ * @author   Codilar Team Player <ankith@codilar.com>
+ * @license  Open Source
+ * @link     https://www.codilar.com
+ * @copyright Copyright © 2021 Codilar Technologies Pvt. Ltd.. All rights reserved
+ *
+ * A magento 2 module to have sellers for products
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="codilar_seller_info" resource="default" engine="innodb"
+           comment=" Information Store">
+        <column xsi:type="int" name="id" padding="10" unsigned="true" nullable="false" identity="true"
+                comment="Seller ID"/>
+        <column xsi:type="varchar" name="name" nullable="true" length="200"
+                comment="Seller Name"/>
+        <column xsi:type="date" name="dob" nullable="true"  comment="Seller Dob"/>
+        <column xsi:type="varchar" name="email" nullable="true" length="30"
+                comment="Seller Email"/>
+        <column xsi:type="varchar" name="address" nullable="true" length="200"
+                comment="Seller Address"/>
+        <column xsi:type="int" name="isEnable" nullable="true"   padding="10"
+                comment="Is Seller Enabled"/>
+        <column xsi:type="varchar" name="image" nullable="true" length="500"
+                comment="Seller Image"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="id"/>
+        </constraint>
+    </table>
+</schema>
+

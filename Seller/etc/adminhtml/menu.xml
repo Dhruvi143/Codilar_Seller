@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Codilar_Seller::seller" title="Seller" translate="title" module="Codilar_Seller" sortOrder="75" resource="Codilar_Seller::seller"/>
+        <add id="Codilar_Seller::seller_listing" title="All Seller" translate="title" module="Codilar_Seller" sortOrder="10" parent="Codilar_Seller::seller" action="seller/info/index" resource="Codilar_Seller::seller"/>
+    </menu>
+</config>

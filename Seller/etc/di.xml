@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * di.xml
+ *
+ * @description A magento 2 module to have sellers for products
+ * @author   Codilar Team Player <ankith@codilar.com>
+ * @license  Open Source
+ * @link     https://www.codilar.com
+ * @copyright Copyright © 2021 Codilar Technologies Pvt. Ltd.. All rights reserved
+ *
+ * A magento 2 module to have sellers for products
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Codilar\Seller\Model\ResourceModel\Seller\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">codilar_seller_info</argument>
+            <argument name="resourceModel" xsi:type="string">Codilar\Seller\Model\ResourceModel\Seller</argument>
+        </arguments>
+    </virtualType>
+
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="seller_listing_ui_data_source" xsi:type="string">Codilar\Seller\Model\ResourceModel\Seller\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <preference for="Codilar\Seller\Api\SellerRepositoryInterface" type="Codilar\Seller\Model\Api\SellerRepository" />
+
+</config>

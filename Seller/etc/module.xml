@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * module.xml
+ *
+ * @description A magento 2 module to have sellers for products
+ * @author   Codilar Team Player <ankith@codilar.com>
+ * @license  Open Source
+ * @link     https://www.codilar.com
+ * @copyright Copyright © 2021 Codilar Technologies Pvt. Ltd.. All rights reserved
+ *
+ * A magento 2 module to have sellers for products
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="Codilar_Seller" >
+        <sequence>
+            <module name="Magento_Catalog" />
+        </sequence>
+    </module>
+</config>
